@@ -11,25 +11,25 @@ export class ChamadoService {
   constructor(private http: HttpClient) {}
 
   findById(id: any): Observable<Chamado> {
-    return this.http.get<Chamado>(`${API_CONFIG.baseUrl}/chamado/${id}`);
+    return this.http.get<Chamado>(`${API_CONFIG.baseUrl}/chamados/${id}`);
   }
 
   findAll(): Observable<Chamado[]> {
-    return this.http.get<Chamado[]>(`${API_CONFIG.baseUrl}/chamado`);
+    return this.http.get<Chamado[]>(`${API_CONFIG.baseUrl}/chamados`);
   }
 
   create(chamado: Chamado): Observable<Chamado> {
-    return this.http.post<Chamado>(`${API_CONFIG.baseUrl}/chamado`, chamado);
+    return this.http.post<Chamado>(`${API_CONFIG.baseUrl}/chamados`, chamado);
   }
 
   update(chamado: Chamado): Observable<Chamado> {
     return this.http.put<Chamado>(
-      `${API_CONFIG.baseUrl}/chamado/${chamado.id}`,
+      `${API_CONFIG.baseUrl}/chamados/${chamado.id}`,
       chamado
     );
   }
 
   delete(id: any): Observable<Chamado> {
-    return this.http.delete<Chamado>(`${API_CONFIG.baseUrl}/chamado/${id}`);
+    return this.http.delete<Chamado>(`${API_CONFIG.baseUrl}/chamados/${id}`);
   }
 }
