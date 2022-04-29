@@ -1,7 +1,22 @@
-.container{
-    width: 95%;
-    margin: auto;
+.container {
+  width: 95%;
+  margin: auto;
 }
 table {
-    width: 100%;
-  }
+  width: 100%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
