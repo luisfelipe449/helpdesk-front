@@ -1,6 +1,6 @@
 <mat-drawer-container class="container" autosize>
   <mat-drawer #drawer class="sidenav mat-elevation-z8" mode="side">
-    <img src="../../../assets/img//side-image.svg" alt="Imagem de navegação">
+    <img src="../../../assets/img//side-image.svg" alt="Imagem de navegação" />
     <mat-nav-list class="nav-list">
       <a mat-list-item routerLink="/" routerLinkActive="active">
         <mat-icon>home</mat-icon>
@@ -31,10 +31,9 @@
       mat-icon-button
       (click)="drawer.toggle()"
     >
-      <mat-icon>menu</mat-icon>
+      <mat-icon class="btn" *ngIf="!drawer.opened">menu</mat-icon>
+      <mat-icon class="btn" *ngIf="drawer.opened">close</mat-icon>
     </button>
-    
   </div>
   <router-outlet></router-outlet>
- 
 </mat-drawer-container>
