@@ -17,10 +17,11 @@
       <mat-label>Senha</mat-label>
       <input
         [formControl]="senha"
-        required=""
+        required
         [(ngModel)]="creds.senha"
         matInput
         placeholder="Senha"
+        type="password"
       />
     </mat-form-field>
     <button
