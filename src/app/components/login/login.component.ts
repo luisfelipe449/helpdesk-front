@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
         this.service.succesfulLogin(
           response.headers.get("Authorization").substring(7)
         );
-        this.router.navigate(["/login"]);
+        this.router.navigate([""]);
       },
       () => {
         this.toast.error("Usuario e/ou senha invalidos");
