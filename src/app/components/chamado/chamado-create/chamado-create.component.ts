@@ -47,7 +47,34 @@ export class ChamadoCreateComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.findAllClientes();
+    this.findAllTecnicos();
+  }
+
+  create(): void {
+    this.chamadoService.create(this.chamado).subscribe(
+      (res) => {
+        this.toastService.success("Chamado criado com sucesso", "Novo chamado");
+        this.router.navigate(["chamados"]);
+      },
+      (ex) => {
+        this.toastService.error(ex.error.error);
+      }
+    );
+  }
+
+  findAllClientes(): void {
+    this.clienteService.findAll().subscribe((res) => {
+      this.clientes = res;
+    });
+  }
+
+  findAllTecnicos(): void {
+    this.tecnicoService.findAll().subscribe((res) => {
+      this.tecnicos = res;
+    });
+  }
 
   validaCampos(): boolean {
     return (
