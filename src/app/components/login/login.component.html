@@ -2,7 +2,7 @@
   <form class="form mat-elevation-z8">
     <h1>Help Desk</h1>
     <img src="assets/img/login-image.svg" alt="Help Desk" />
-    <mat-form-field class="full-width" appearance="fill">
+    <mat-form-field class="full-width" appearance="outline">
       <mat-label>E-mail</mat-label>
       <input
         [formControl]="email"
@@ -11,9 +11,10 @@
         matInput
         placeholder="fulano@mail.com"
       />
+      <mat-icon class="edit">email</mat-icon>
     </mat-form-field>
 
-    <mat-form-field class="full-width" appearance="fill">
+    <mat-form-field class="full-width" appearance="outline">
       <mat-label>Senha</mat-label>
       <input
         [formControl]="senha"
@@ -23,6 +24,7 @@
         placeholder="Senha"
         type="password"
       />
+      <mat-icon class="edit">password</mat-icon>
     </mat-form-field>
     <button
       (click)="logar()"
