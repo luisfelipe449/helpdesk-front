@@ -1,6 +1,6 @@
 {
     "/api/*": {
-    "target": "localhost:8080",
+    "target": "https://api-helpdesk-final.herokuapp.com",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true
