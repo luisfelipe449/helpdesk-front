@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { MatPaginator } from "@angular/material/paginator";
 import { MatTableDataSource } from "@angular/material/table";
-import { ToastrService } from "ngx-toastr";
-import { catchError, Observable } from "rxjs";
+import {  Observable } from "rxjs";
 import { Chamado } from "src/app/models/chamado";
 import { ChamadoService } from "src/app/services/chamado.service";
 
@@ -36,7 +35,6 @@ export class ChamadoListComponent implements OnInit {
 
   constructor(
     private service: ChamadoService,
-    private toastService: ToastrService
   ) {}
 
   findAll(): void {
@@ -80,9 +78,5 @@ export class ChamadoListComponent implements OnInit {
     this.FILTERED_DATA = list;
     this.chamados = new MatTableDataSource<Chamado>(list);
     this.chamados.paginator = this.paginator;
-  }
-
-  onError(errorMsg: string) {
-    this.toastService.success("Chamado criado com sucesso", "Novo chamado");
   }
 }

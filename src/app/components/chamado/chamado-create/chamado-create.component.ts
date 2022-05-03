@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { FormControl, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
@@ -52,7 +52,7 @@ export class ChamadoCreateComponent implements OnInit {
 
   create(): void {
     this.chamadoService.create(this.chamado).subscribe(
-      (res) => {
+      () => {
         this.toastService.success("Chamado criado com sucesso", "Novo chamado");
         this.router.navigate(["chamados"]);
       },
