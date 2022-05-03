@@ -24,7 +24,8 @@ export class ChamadoReadComponent implements OnInit {
   constructor(
     private chamadoService: ChamadoService,
     private toastService: ToastrService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -61,5 +62,23 @@ export class ChamadoReadComponent implements OnInit {
     } else {
       return "ALTA";
     }
+  }
+
+  delete(): void {
+    this.chamadoService.delete(this.chamado.id).subscribe(
+      () => {
+        this.toastService.success("Chamado deletado com sucesso", "Delete");
+        this.router.navigate(["chamados"]);
+      },
+      (ex) => {
+        if (ex.error.errors) {
+          ex.error.errors.forEach((element) => {
+            this.toastService.error(element.message);
+          });
+        } else {
+          this.toastService.error(ex.error.message);
+        }
+      }
+    );
   }
 }

@@ -34,8 +34,6 @@ export class ClienteListComponent implements OnInit {
 
   constructor(
     private service: ClienteService,
-    private toast: ToastrService,
-    private router: Router
   ) {}
 
   ngOnInit(): void {
