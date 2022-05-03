@@ -2,9 +2,9 @@
   width: 95%;
   margin: auto;
 }
-.edit{
+.edit {
   text-decoration: none;
-  color: rgb(0, 26, 255);
+  color: #002962;
 }
 table {
   width: 100%;
@@ -25,7 +25,15 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-.delete{
+.delete {
   cursor: pointer;
   color: red;
+}
+
+.loading-spinner {
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

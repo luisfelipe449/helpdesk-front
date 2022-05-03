@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-@import '../node_modules/ngx-toastr/toastr.css';
+@import "../node_modules/ngx-toastr/toastr.css";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: sans-serif, Roboto, "Helvetica Neue";
+}
 .mat-icon {
-    vertical-align: middle;
+  vertical-align: middle;
 }

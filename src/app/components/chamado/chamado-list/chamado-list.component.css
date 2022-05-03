@@ -24,7 +24,11 @@ h1 {
 }
 
 .edit {
-  color: rgb(0, 153, 255);
+  color: #002962;
+}
+
+.visibility {
+  color: rgb(36, 148, 26);
 }
 
 .delete {
@@ -35,4 +39,12 @@ mat-radio-group {
   display: flex;
   justify-content: space-around;
   margin-bottom: 1rem;
+}
+
+.loading-spinner {
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

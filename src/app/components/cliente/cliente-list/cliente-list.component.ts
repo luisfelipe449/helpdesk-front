@@ -3,6 +3,7 @@ import { MatPaginator } from "@angular/material/paginator";
 import { MatTableDataSource } from "@angular/material/table";
 import { Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
+import { Observable } from "rxjs";
 import { Cliente } from "src/app/models/cliente";
 import { ClienteService } from "src/app/services/cliente.service";
 
@@ -12,6 +13,7 @@ import { ClienteService } from "src/app/services/cliente.service";
   styleUrls: ["./cliente-list.component.css"],
 })
 export class ClienteListComponent implements OnInit {
+  clientes$: Observable<Cliente[]>;
   displayedColumns: string[] = ["id", "nome", "cpf", "email", "acoes"];
 
   ELEMENT_DATA: Cliente[] = [
@@ -26,7 +28,7 @@ export class ClienteListComponent implements OnInit {
     },
   ];
 
-  dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
+  clientes = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -37,19 +39,19 @@ export class ClienteListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.findAll();
+    this.clientes$ = this.service.findAll();
   }
 
   findAll() {
     this.service.findAll().subscribe((response) => {
       this.ELEMENT_DATA = response;
-      this.dataSource = new MatTableDataSource<Cliente>(response);
-      this.dataSource.paginator = this.paginator;
+      this.clientes = new MatTableDataSource<Cliente>(response);
+      this.clientes.paginator = this.paginator;
     });
   }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+    this.clientes.filter = filterValue.trim().toLowerCase();
   }
 }
