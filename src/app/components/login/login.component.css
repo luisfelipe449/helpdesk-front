@@ -1,10 +1,6 @@
 .container {
   height: 100%;
-  background: linear-gradient(
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 0%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(37,97,207,1) 0%, rgba(0,212,255,1) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,24 +14,26 @@
   border-radius: 1rem;
 }
 
-h1{
-    text-align: center;
+h1 {
+  width: 100%;
+  text-align: center;
+  
 }
 
 img {
-    height: 15rem;
-    width: 100%;
-    margin: 1rem auto 1rem auto;
+  height: 15rem;
+  width: 100%;
+  margin: 1.5rem auto 1.5rem auto;
 }
 
-.full-width{
-    width: 100%;
+.full-width {
+  width: 100%;
 }
 
-button{
-    margin-top: 1rem;
+button {
+  margin-top: 1.5rem;
 }
 
 mat-icon {
-  opacity: .5;
+  opacity: .6;
 }
