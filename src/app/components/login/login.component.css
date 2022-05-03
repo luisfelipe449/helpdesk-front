@@ -1,6 +1,6 @@
 .container {
   height: 100%;
-  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(37,97,207,1) 0%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, #2d5d7b 0%, #457eac 100%);
   display: flex;
   align-items: center;
   justify-content: center;

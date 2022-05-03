@@ -1,4 +1,4 @@
-.container{
+/* .container{
     height: 100vh;
 }
 
@@ -27,4 +27,33 @@ img{
     color: white;
     background: rgb(2,0,36);
     background: linear-gradient(rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);;
+} */
+
+.menu-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #2d5d7b;
+}
+
+.menu-second-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #457eac;
+  padding: 0 10rem;
+}
+
+mat-icon {
+  color: white;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
 }

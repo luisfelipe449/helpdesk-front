@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
 import { AuthService } from "src/app/services/auth.service";
+import { SharedService } from "src/app/services/shared.service";
 
 @Component({
   selector: "app-nav",
@@ -9,10 +10,19 @@ import { AuthService } from "src/app/services/auth.service";
   styleUrls: ["./nav.component.css"],
 })
 export class NavComponent implements OnInit {
-  constructor(private router: Router, private authService: AuthService, private toast: ToastrService) {}
+  User = {
+    email: "",
+  };
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    private toast: ToastrService,
+    private sharedService: SharedService
+  ) {}
 
   ngOnInit(): void {
-    this.router.navigate(["/home"]);
+    this.User = this.sharedService.sharedUser;
+    this.router.navigate(["home"]);
   }
 
   logout() {

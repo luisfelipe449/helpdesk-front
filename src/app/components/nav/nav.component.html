@@ -1,4 +1,4 @@
-<mat-drawer-container class="container" autosize>
+<!-- <mat-drawer-container class="container" autosize>
   <mat-drawer #drawer class="sidenav mat-elevation-z8" mode="side">
     <img src="../../../assets/img//side-image.svg" alt="Imagem de navegação" />
     <mat-nav-list class="nav-list">
@@ -41,4 +41,33 @@
     </button>
   </div>
   <router-outlet></router-outlet>
-</mat-drawer-container>
+</mat-drawer-container> -->
+<mat-toolbar color="primary" class="menu">
+  <mat-toolbar-row class="menu-row mat-elevation-z4">
+    <mat-icon>person</mat-icon>
+    {{ User.email }}
+    <a mat-list-item (click)="logout()" routerLinkActive="active">
+      <mat-icon>logout</mat-icon>
+    </a>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="menu-second-row mat-elevation-z4">
+      <a mat-list-item routerLink="home" routerLinkActive="active">
+        <span>Home</span>
+      </a>
+      <a mat-list-item routerLink="tecnicos" routerLinkActive="active">
+        <span>Tecnicos</span>
+      </a>
+      <a mat-list-item routerLink="clientes" routerLinkActive="active">
+        <span>Clientes</span>
+      </a>
+      <a mat-list-item routerLink="chamados" routerLinkActive="active">
+        <span>Chamados</span>
+      </a>
+      <a mat-list-item href="https://github.com/luisfelipe449/" target="_blank">
+        <span>Github</span>
+      </a>
+  </mat-toolbar-row>
+</mat-toolbar>
+<br />
+<router-outlet></router-outlet>
+<br />

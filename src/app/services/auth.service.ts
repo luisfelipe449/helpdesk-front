@@ -8,7 +8,6 @@ import { Credenciais } from "../models/credenciais";
   providedIn: "root",
 })
 export class AuthService {
-
   jwtService: JwtHelperService = new JwtHelperService();
 
   constructor(private http: HttpClient) {}
@@ -25,8 +24,8 @@ export class AuthService {
   }
 
   isAuthenticated() {
-    let token = localStorage.getItem('token');
-    if(token != null) {
+    let token = localStorage.getItem("token");
+    if (token != null) {
       return !this.jwtService.isTokenExpired(token);
     }
     return false;
@@ -34,5 +33,5 @@ export class AuthService {
 
   logout() {
     localStorage.clear();
-}
+  }
 }

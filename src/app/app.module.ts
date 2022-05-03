@@ -40,6 +40,7 @@ import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-
 import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
 import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatTabsModule,
     ToastrModule.forRoot({
       timeOut: 4000,
       closeButton: true,

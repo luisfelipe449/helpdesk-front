@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
 import { Credenciais } from "src/app/models/credenciais";
 import { AuthService } from "src/app/services/auth.service";
+import { SharedService } from "src/app/services/shared.service";
 
 @Component({
   selector: "app-login",
@@ -22,7 +23,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private toast: ToastrService,
     private service: AuthService,
-    private router: Router
+    private router: Router,
+    private sharedService: SharedService
   ) {}
 
   ngOnInit(): void {}
@@ -33,6 +35,7 @@ export class LoginComponent implements OnInit {
         this.service.succesfulLogin(
           response.headers.get("Authorization").substring(7)
         );
+        this.sharedService.sharedUser = this.creds;
         this.router.navigate([""]);
       },
       () => {
