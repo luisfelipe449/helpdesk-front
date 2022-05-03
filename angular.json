@@ -108,6 +108,9 @@
           "options": {
             "browserTarget": "helpdesk:build"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
