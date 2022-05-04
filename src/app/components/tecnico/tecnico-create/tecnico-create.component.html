@@ -13,12 +13,16 @@
       >
       <mat-checkbox
         (click)="addPerfil(1)"
-        [checked]="true"
+        [disabled]="true"
         class="margin"
         color="primary"
         >Cliente</mat-checkbox
       >
-      <mat-checkbox (click)="addPerfil(2)" class="margin" color="primary"
+      <mat-checkbox
+        [checked]="true"
+        (click)="addPerfil(2)"
+        class="margin"
+        color="primary"
         >Tecnico</mat-checkbox
       >
     </section>
