@@ -5,16 +5,7 @@
     Novo técnico
   </button>
 
-  <mat-form-field appearance="standard">
-    <mat-label>Buscar</mat-label>
-    <input
-      matInput
-      (keyup)="applyFilter($event)"
-      placeholder="Buscar"
-      #input
-    />
-  </mat-form-field>
-
+  <br />
   <div
     class="table mat-elevation-z8"
     *ngIf="tecnicos$ | async as tecnicos; else loading"
