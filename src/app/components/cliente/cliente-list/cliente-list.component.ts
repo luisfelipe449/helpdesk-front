@@ -19,11 +19,11 @@ export class ClienteListComponent implements OnInit {
   ELEMENT_DATA: Cliente[] = [
     {
       id: 1,
-      nome: "Cliente 1",
-      email: "cliente@mail.com",
-      cpf: "000.000.000-00",
-      senha: "123",
-      perfis: ["ADMIN"],
+      nome: "",
+      email: "",
+      cpf: "",
+      senha: "",
+      perfis: [""],
       dataCriacao: new Date(),
     },
   ];

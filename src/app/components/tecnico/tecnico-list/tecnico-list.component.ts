@@ -17,11 +17,11 @@ export class TecnicoListComponent implements OnInit {
   ELEMENT_DATA: Tecnico[] = [
     {
       id: 1,
-      nome: "Tecnico 1",
-      email: "tecnico@mail.com",
-      cpf: "000.000.000-00",
-      senha: "123",
-      perfis: ["ADMIN"],
+      nome: "",
+      email: "",
+      cpf: "",
+      senha: "",
+      perfis: [""],
       dataCriacao: new Date(),
     },
   ];

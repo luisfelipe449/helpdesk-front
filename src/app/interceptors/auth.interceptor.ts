@@ -10,7 +10,7 @@ import { Observable } from "rxjs";
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-  constructor() {}
+  constructor() { /* TODO document why this constructor is empty */ }
 
   intercept(
     request: HttpRequest<any>,

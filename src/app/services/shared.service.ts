@@ -9,5 +9,5 @@ export class SharedService {
     email: string;
   };
 
-  constructor() {}
+  constructor() { /* TODO document why this constructor is empty */ }
 }
