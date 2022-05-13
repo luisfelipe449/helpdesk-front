@@ -38,6 +38,7 @@ import { ClienteListComponent } from "./components/cliente/cliente-list/cliente-
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
+import { MatSortModule } from "@angular/material/sort";
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { ChamadoCreateComponent } from './components/chamado/chamado-create/cham
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatSortModule,
     ToastrModule.forRoot({
       timeOut: 4000,
       closeButton: true,
