@@ -1,5 +1,5 @@
 # Help Desk
-This is my help desk system \o/ Enjoy It!
+CRUD de um sistema web para uma microempresa abrir e encerrar suas ordens de serviço.
 
 ### Technologies
 #### Here are the technologies I used in this project:
